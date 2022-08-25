@@ -1,0 +1,46 @@
+Angular: 
+    JS Framework for building SPA's. 
+SPA:
+    Single page application, which is a web app with one HTML page only.
+    All the content is rendered dynamically via Javascript; this means the
+    user experience is generally better, faster and smoother because you're 
+    not having to sit through entire page re-loads. Of course, the user 
+    doesn't ken there's only one page. We have to provide the illusion of 
+    routes...
+Package manager: 
+    Consider a build tool, like maven or gradle in Java: a package manager is 
+    a tool that manages an app's dependencies. Without it, you end up with
+    hunners of script tags in your HTML page, and some of them depend on others
+    and have to be loaded in the right order. NPM does this for you - it takes
+    in a list of depencies (i.e. package.json) and manages them recursively.
+    There's also yarn; I know of its existence, but not much more.
+Module bundler:
+    A tool that bundles many JS files into one. I think we're talking babel/
+    webpack here. Again, it means that rather than sending 50-odd separate js 
+    files (and 50-odd browser network requests) you only have one. One big file 
+    with only one request is generally faster than a lot of short loads but with 
+    many different requests. And yes, we're talking webpack.
+Transpiler:
+    A JS tool that 'down-levels' your code... that is, moves it from one version
+    to another, so that all the browsers you're likely to encounter can actually
+    read it. And here we're talking babel. 
+The three tools:
+    webpack, babel and npm. You don't really notice them as they're built into
+    Angliar. But they're always there working.
+ECMAScript: 
+    The official JavaScript spec. There used to be other implementations of it, 
+    like coffeescript, but JavaScript wiped them out like Omicron.
+    ES5 (2009): widely supported by almost every browser.
+    ES6 (2015): pretty widely supported, though not universal. Considered to be
+        modern JS. It includes arrow functions, let/const, and spread (which I'm 
+        keen to get my heid aroon').
+    ESNext (bleeding edge): cannot assume this is supported.
+    Compatibility: check out https://kangax.github.io/compat-table/es6/ which 
+        gives you a full table of what browsers and what versions thereof 
+        support what JS features from what ECMAScript version. But we'll just
+        use babel to down-level our stuff onyway.
+Typescript:
+    A static type-checker for JavaScript. JS is dynamically typed (which IS the
+    opposite of statically-typed, as I suspected). TypeScript forces static 
+    typing onto your JS.
+

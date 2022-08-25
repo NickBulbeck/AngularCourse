@@ -1,0 +1,27 @@
+npm init initialises the project as a managed application.
+Webpack standard puts all your JS in a folder called src.
+As standard, your app will have its manager config file at the
+top level (package.json here) and the src folder that has the
+actual code in.
+We've npm'd webpack and the webpack-cli; not used these before,
+or not explicitly in this way at least, so this'll be interesting.
+(Should've --save-dev'd them, really, but it's just a bit of fun.)
+
+Can build your app into a single file using webpack. Don't have 
+it installed globally (neither did Stuart) so we'll use npx webpack,
+with npx running stuff locally rather than globally.
+
+Webpack creates a dist folder, with a main.js file in it. In the 
+first instance of this tiny wee app, where src/index.js only had a 
+single console.log in it, dist/main.js also just had that single
+line.
+
+We do need to create our own wee index.html page. This is the single page 
+in our spa. BTW - enter an exclamation mark, then return - you get an 
+html page. And you need to add a <script> tag in the <head> that plumbs 
+in the dist/main.js file.
+
+To serve it straight fae VS Code, I've installed live server. I did have 
+to close VS Code and re-open it again for this to work properly.
+
+BTW - you can npx webpack --watch to make it watch for changes.

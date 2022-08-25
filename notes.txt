@@ -1,0 +1,23 @@
+To put bootstrap in a Nangliar project, npm install bootstrap and add the following:
+"node_modules/bootstrap/dist/css/bootstrap.min.css"
+to the angular.json styles object.
+
+I think I've accidentally deleted a notes.txt file - there's a whole ton of notes that are missing.
+
+Smart/dumb components: a smart component knows about the data, and where it comes from. A dumb
+component is given data to render and it renders it. Or maybe produces some, which it transmits,
+but it doesn't know what'll happen to it. The general idea is that most of the components should
+be dumb. That makes the app easier to test and maintain.
+
+(Note - the course manual, according to Stuart, isn't great on inputs and outputs because
+the laddie who wrote it was too keen on Redux.)
+
+Most of your components should be back-end agnostic. That is, inject dependencies in as few places
+as possible. Few components should know or care about the back end.
+
+Dependency injection
+====================
+(Consider also service-locator pattern; dependency injection is a pattern, apparently.)
+A smart component depends on a service, let's say. So: the service is the dependency.
+
+When you generate one, it's ng generate service <name>

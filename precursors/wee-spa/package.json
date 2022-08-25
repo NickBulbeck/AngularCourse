@@ -1,0 +1,15 @@
+{
+  "name": "wee-spa",
+  "version": "1.0.0",
+  "description": "A simple native JS spa before we Angularise it",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Bulbeck",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

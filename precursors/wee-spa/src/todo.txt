@@ -1,0 +1,8 @@
+Modify the code to us as many ES6 features as you can.
+let/const, 
+
+arrow functions, 
+
+template literals, 
+
+component to add new items to the list.

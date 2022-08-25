@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=document.createElement("h1");e.innerText="Nick's Wee shopping-list spa";const n=e,o=document.createElement("ul");["Bread","Cheese","Wine","Kwafi","Chocolate"].forEach((e=>{o.innerHTML+=`<li>${e}</li>`}));const t=o;console.log("My wee spa..."),onload=()=>{document.body.appendChild(n),document.body.appendChild(t)}})();
