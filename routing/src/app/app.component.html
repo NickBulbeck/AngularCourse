@@ -1,0 +1,16 @@
+<h1>Routing</h1>
+<!-- With your nav bar, mind and dinnae use anchors in the usual way. If you do, 
+the browser reloads the entire app each time you click one. 
+The routerLink attribute means that clicking the link resutls in the writing of the
+path to the address bar, and nothing else (via the history object). Then, Angular's
+conditional rendering takes over. -->
+<ul>
+    <li><a routerLink="/">Home</a></li> 
+    <li><a routerLink="/about">About</a></li> 
+    <li><a routerLink="/contact">Contact</a></li> 
+</ul>
+
+
+<!-- The component associated with the current path will be rendered as a wean of the
+router-outlet.  -->
+<router-outlet></router-outlet>

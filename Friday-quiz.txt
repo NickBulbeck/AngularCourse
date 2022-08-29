@@ -1,0 +1,51 @@
+1
+WHat is the basic mechanism for rendering view model props in the view
+... interpolation? {{}} correct.
+
+2
+What will be rendered to the text box in each case below?
+<input type="text" value="name" /> the string "name"
+<input type="text" value="name" /> the value of the view model variable name
+
+3
+How does one bind a view event to a view model function?
+ putting its name in round brackets (click)="handleClick()" and removing the 'on'
+
+
+4 How does one access the object associated with a view event
+e.g. (click)="handleClick($event)" - the event object here, not the component! That was kind
+of throwing me. You can also create custom events; this example here is a standard HTML event,
+and in these cases it's the event object created by the browser.
+
+5 Which directive is used to render an HTML element conditionally?
+*ngIf - and it has to have a JavaScript expression that evaluates to true or false
+
+6 Which directive is used to render HTML elements iteratively?
+*ngFor
+
+7
+How does one pass data from parent to child component?
+via props where you declare it in the HTML file - like a custom attribute. 
+Annotate the wean with @Input(), and the parent can assign a value when rendering
+the wean. @Input() is a custom HTML attribute.
+<app-child input="">
+
+8
+How does one pass data from child to parent component?
+Annotate the wean with @Output() - effectively a custom HTML event.
+DataType is EventEmitter<> and inside the <> you specify the data type.
+The parent can react to the custom event when rendering the child.
+E.g. <app-child (some-event)="handle()">
+An @Output() is a custom event.
+
+9
+Given the view code below, in which component does the handleNewItem function reside?
+<app-item-form [items]="items" (newitem)="handleNewItem($event)><app-item-form>
+It is in the parent component, that's rendering <app-item-form> as a wean. The wean has an 
+@Input() called "items" and an @Output() called handleNewItem(). "items" is a prop of the
+parent.
+
+10
+What role does a service play in an Angular app?
+Talks to the server/outside stuff; and most of the business logic. It's injected into a 
+smart component, generally; it can in principle be injected into any component.

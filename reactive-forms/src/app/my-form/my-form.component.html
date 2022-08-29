@@ -1,0 +1,19 @@
+<!-- formGroup should be assigned a ref to the formGroup prop in the view model -->
+<!-- We don't need to pass anything to the foadyb handleSubmit function, because
+it's a form and Angular already knows this -->
+<form [formGroup]="formGroup" (ngSubmit)="handleSubmit()">
+    <div [ngStyle]="{marginBottom: '1rem'}">
+        <label>Name</label>
+        <!-- <input> defaults to type="text", btw -->
+        <!-- formControlName should be assigned the associated prop name in the FormGroup object 
+              which effectively binds the text box two ways. -->
+        <input formControlName="name" />
+        <small *ngIf="nameIsInvalidAndTouched()">The name is required</small>
+    </div>
+    <div [ngStyle]="{marginBottom: '1rem'}">
+        <label>Email</label>
+        <input formControlName="email"/>
+        <small *ngIf="emailIsInvalidAndTouched()">A valid email is required</small>
+    </div>
+    <button >Submit</button>
+</form>

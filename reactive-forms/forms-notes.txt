@@ -1,0 +1,17 @@
+Initially, Angular was called AngularJS. Everything was two-way
+bound, so that any change in the view would affect the model and vice
+versa. This wisnae great. In version 2, you had property-binding on
+the view and event-binding on the model. But forms remain the exception:
+in a form you want it to be two-way bound. When the user types in a text-bocx, 
+we want it to affect the model, and we want changes to the model to be 
+reflected in the form.
+There's >1 way of doing a form, but we're doing reactive forms.
+
+You need to update app.module with the reactive forms hingmy - see app.module file.
+
+If you console.log() the FormGroup object, you get some really interesting stuff.
+We'll use some of these. For instance, FormGroup.value returns an object with all
+the values of the form in it.
+
+ng-classes - you've seen this in ContactsDashboard.  You can overwrite these ng 
+classes in the css for the form, and angular adds them automatically.

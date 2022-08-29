@@ -1,0 +1,5 @@
+Note that the history object is part of native javascript; there's one on 
+the window. 
+There's a design pattern that involves having page components. There are some
+things, like the nav bar, that you'll want to render on every page. Others will
+go only on their own pages. 

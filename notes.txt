@@ -21,3 +21,5 @@ Dependency injection
 A smart component depends on a service, let's say. So: the service is the dependency.
 
 When you generate one, it's ng generate service <name>
+
+
