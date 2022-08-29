@@ -1,0 +1,16 @@
+<div [ngClass]="{ styled:true}">
+<!-- 
+    A dumb component is given its data to render by its parent component.
+ -->
+    <h3>Inputs and Outputs</h3>
+    <p>{{message}}</p>
+    <p>{{secondMessage}}</p>
+    <p>Magic number: {{magicNumber}}</p>
+<!-- 
+    If a dumb component produces some data, e.g in a form, it must pass that data to the
+    parent to be processed. It can't talk to the rest API, for example.
+ -->
+    <button (click)="handleSendRequestToParent()">Send request to parent</button>
+
+</div>
+

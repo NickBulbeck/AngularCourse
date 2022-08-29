@@ -1,0 +1,44 @@
+{
+    "tracks": [
+      {
+        "id": 1,
+        "title": "All around my hat",
+        "artist": "Steeleye Span",
+        "album": "All around my hat",
+        "genre": "Folk",
+        "stars": 5
+      },
+      {
+        "id": 2,
+        "title": "All aroon' mah hat",
+        "artist": "McSteeleye McSpan",
+        "album": "Made it up",
+        "genre": "Scottish Folk",
+        "stars": 5
+      },
+      {
+        "id": 3,
+        "title": "Cover of All around my hat",
+        "artist": "Status Quo with Steeleye Span",
+        "album": "YouTube",
+        "genre": "Fun",
+        "stars": 4
+      },
+      {
+        "id": 4,
+        "title": "DEATH! MAYHEM! MORE DEATH!",
+        "artist": "Iron Maiden",
+        "album": "Violent Death After Midnight",
+        "genre": "Rock",
+        "stars": 5
+      },
+      {
+        "id": 5,
+        "title": "Warheads",
+        "artist": "Iron Maiden",
+        "album": "Three Sides to Every Story",
+        "genre": "Metal",
+        "stars": 4
+      }
+    ]
+  }

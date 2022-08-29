@@ -1,0 +1,13 @@
+<table>
+    <tr *ngFor="let t of tracks">
+        <td>{{t.title}}</td>
+        <td>{{t.artist}}</td>
+        <td>{{t.album}}</td>
+        <td>{{t.genre}}</td>
+        <td>{{t.stars}}</td>
+    </tr>
+</table>
+<!-- search component - takes an event in via a search. Passes the results back to tracks;
+    which then passes the results to track-table. -->
+
+    <!-- .filter(t => t.title.includes(searchTerm)) -->

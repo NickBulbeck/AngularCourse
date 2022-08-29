@@ -1,0 +1,11 @@
+<!-- Want this to render a simple text box with a button. 
+    You could wrap this in a form if you wanted to, but it's\
+    not really necessary.
+-->
+<div>
+<!-- #searchTextBox is a template variable - it exists only in the view and not in the view model - and it
+references the text box. This is a trick you need to ken about if you want to avoid the more complex
+approach of having yet another event emitter from the text box to the button handler -->
+    <input type="search" placeholder="Track title" #searchTextBox/>
+    <button (click)="handleSearch(searchTextBox.value)">Search</button>
+</div>

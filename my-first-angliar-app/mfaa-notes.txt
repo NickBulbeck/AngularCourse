@@ -1,0 +1,30 @@
+Whatever you do, don't copy and paste an Angliar app.
+
+When you first ng new app-name, cd into the directory and ng serve. This nodemon's stuff. 
+It's a good idea to keep the terminal in view, though, as you'll see compilation errors in 
+real time as you try to save errors.
+
+Some stuff in the folder:
+package.json you know. It's big.
+node_modules you also know; it's big, too. A lot of them are only required for development, though.
+tsconfig.json:
+    - look at the target. es2016 or es2015 may be a better bet than 2020 that I've got.
+angular.json:
+    - lot of settings related to the project. Don't generally need to hack this.
+src folder:
+    Most of the work happens in here.
+    index.html:
+        - is the one html file, and it's all but empty. Everything is transpiled into the
+        app-root element. It begins with app-, which means it's an angular custom component.
+    srce/app folder:
+        - start with 5 files. Four of them are the basic app.component that is the one component
+        it has by default. You don't always need all four. You need the html file, and you nearly
+        always need the ts file.
+        - the first thing you do is completely empty app.component.html
+        - the .ts file is a class component. The @Component thing is a "decorator". Anything that
+        begins with an @ is a decorator. It's metadata.
+
+When you add a new component, every one has to be listed in the app.module.ts file. So although in
+theory you can create/remove a component by creating files, you'd have to change this file as
+well. That's why it's better to use ng generate.
+

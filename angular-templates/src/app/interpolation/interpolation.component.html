@@ -1,0 +1,25 @@
+<!-- 
+    Interpolation is a form of property binding. That is, the rendering of some view
+    model data in the view.
+    The {{ prop }} syntax is used (primarily - there are other ways, BTW).
+
+ -->
+ <h3>Interpolation</h3>
+ <p>My name: {{ myName }}</p>
+ <p>My email: {{ myEmail }}</p>
+
+ <!-- 
+    Interpolation can be used to render any expression, not just variables.
+  -->
+ <p>1 + 1 = {{ 1 + 1 }}</p>
+ <p>{{ getGreeting() }}</p>
+
+ <!-- 
+    You can use some logic, although it's best to avoid it because it's
+    clunky - more importantly, it violates single responsibility. Logic
+    should be inside the view model, not in the view.
+  -->
+  <p>{{ myName }} is {{ !isEmployed ? 'not' : '' }} employed</p>
+  <!-- This only works for an expression that returns a value; not a full-blown
+        if-loop.
+ -->

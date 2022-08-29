@@ -1,0 +1,26 @@
+<!-- 
+    Property binding is the binding of some view model prop to some element in the view.
+    Remember, the view-model is the TS and the view is the HTML.
+    Property binding can be used to do what interpolation does. The square brackets are 
+    Angular syntax - they assign the value of a prop to the given attribute.
+    The value of an attribute that's wrapped in [], is a javascript expression.
+ -->
+<h3>Property Binding</h3>
+<p [textContent]="message"></p>
+<!-- This is equivalent to <p>{{message}}</p> -->
+<p>Note that if we don't put 'textContent' in square brackets, nothing renders.</p>
+<!-- But we can also do other stuff, that we can't do with interpolation. -->
+<button [disabled]="buttonDisabled">Click</button>
+<!-- If you miss the [] here, Angular interprets the truthiness of the string
+after it - "buttonEnabled" - which is true, and therefore the button will be stuck
+as disabled. IOW, without the [], the expression attribute="wotevah" is interpreted
+literally. This applies here, because the disabled attribute of a button is by
+nature a boolean. -->
+<input type="text" [value]="textBoxValue" />
+
+<!-- 
+    Just like interpolation, property-binding can deal with any valid expression.
+ -->
+ <p [textContent]="'1 + 1 = ' + (1+1)"></p>
+ <!-- But this is bad. Do the logic inside a function in the view model. -->
+ <p [textContent]="getSum()"></p>

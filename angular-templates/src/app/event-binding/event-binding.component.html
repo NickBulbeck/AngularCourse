@@ -1,0 +1,21 @@
+<!-- 
+    Event binding is the calling of a view model function in response to some
+    (typically user-generated) event.
+    The event attribute must be wrapped in round brackets with the 'on'-prefix
+    removed.
+ -->
+<h3>Event Binding</h3>
+<button (click)="handleSayHello()">Say hello...</button><span> {{ greeting }} times {{counter}}!</span><br/>
+<button (click)="handleIncrementCounter()">Increment Counter</button><span> {{counter}}</span><br/>
+
+<!-- Objects... use an array as this example -->
+<button (click)="handleAddKevin()">Add Kevin</button><span> There are {{names.length}} names.</span><br/>
+
+<!-- 
+    Every event has an associated event object, which contains information about the event
+    itself. Event.target, position, time an' a' tha'. Sometimes it's useful to get hold of the
+    event object.
+    The $event is a Nangular keyword used to reference the event object. This is NOT foadyb.
+    You can call it foadyb in the function itself - e, event, foadyb, wottevah.
+-->
+<p (mouseover)="handleMouseover($event)">Mouse over me...</p>

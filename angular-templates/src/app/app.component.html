@@ -1,0 +1,20 @@
+<!-- <app-interpolation></app-interpolation> -->
+<!-- <app-property-binding></app-property-binding> -->
+<!-- <app-event-binding></app-event-binding> -->
+<!-- <app-directives></app-directives> -->
+<app-inputs-and-outputs
+    message="Hello, wurrld!"
+    [msg]="appMessage"
+    [magicNumber]="randomNumber"
+    (request)="handleRequestEvent($event)">
+    <!-- Remember: $event. This is something that's likely to come with practice. -->
+</app-inputs-and-outputs>
+<!-- [msg] binds a property that has the value stored in the app-component variable called appMessage.
+  But with message="Hello, wurrld!", the app component is passing a string literal down to the 
+  wean component that the wean expects to be called 'message'.
+  Now: magicNumber, which is set up as a number in the wean component, is specified in the wean.
+  IOW, the attribute name is specified in the wean. Binding it to the parent like this means that looks for a
+  randomNumber prop in the app-component. That process of 'binding' isn't making the magicNumber variable
+  a declared hingmy in the app-component: rather, it's binding it's value to the randomNumber variable that
+  IS declared in the app-component.
+-->

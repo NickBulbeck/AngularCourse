@@ -1,0 +1,30 @@
+<!-- 
+    A directive is a custom HTML attribute. A component is a custom element; 
+    a directive is a custom attribute. So, it's a complex form of property binding.
+    Directives enable conditional and iterative rendering.
+    Most built-in directives are named with an ng prefix; but you can create your ain
+    yins just as you create your ain components.
+ -->
+<h3>Directives</h3>
+<p>Account name: {{accountName}}</p>
+<p *ngIf="accountBalance > 0">The account is in credit (with a balance of {{accountBalance}}).</p>
+
+<table>
+    <tr *ngFor="let tx of accountTransactions">
+        <td>{{ tx.date }}</td>
+        <td>{{tx.type}}</td>
+        <td>{{tx.amount}}</td>
+    </tr>
+</table>
+
+<p [ngStyle]="{fontFamily:'sans-serif',fontWeight:'bold'}">£{{ accountBalance }}</p>
+
+<!-- This is flagged differently. It's kind of because it doesn't dictate whether the thing is
+rendered, just how it's rendered. The expression is expected to be a JS object of style props, and 
+watch the replacement of hyphens (which can't be used in javascript names)-->
+
+<!-- Just like ngStyle, ngClass expects a JS object. Each prop is a class name and the
+value is a boolean. In practice, you won't just put 'true' or 'false': you'll tie it to some
+expression or property.
+-->
+<p [ngClass]="{inCredit: accountBalance > 0,inDebit: accountBalance < 0}">£{{ accountBalance }}</p>

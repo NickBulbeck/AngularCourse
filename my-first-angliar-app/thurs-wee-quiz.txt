@@ -1,0 +1,49 @@
+Thursday morning
+================
+
+1) what is a SPA and how does it work?
+    Single page app: renders a single HTML file and populates it with varying data as the user 
+    interacts with it. The content isn't static but is rendered dynamically.
+2) List three JS tools that are commonly used to build Angliar apps
+    Node; Webpack; Babel? 
+    Arguably node is a JavaScript engine... 
+    package manager (npm; keeps all your versions and dependencies in sync) 
+    module bundler (webpack; bundles multiple authored files into one runnable one)
+    transpiler (babel; converts code fae the authored version to the run version)
+3) What is ECMAScript?
+    The de jure standard that JavaScript meets.
+    Big, highly-resourced browsers can pick up on new changes straight away. This, BTW, is
+    why devs use Chrome most of the time. It picks up on the latest ECMAScript changes.
+    But it's also why transpilers are so important, because they create backwards compatibility.
+    NB: A polyfill is a copied-in library that mimics a new shiny feature but using old-school JS.
+
+4) How do let and const differ fae var?
+    Const cannot be reassigned; let can, but both apply block-scoped
+    Also you can't re-declare either of them like you can with var.
+
+5) Re-write this as an arrow function...
+     const writeToLocalStorage = (key, value) => {
+     localStorage.setItem(key, JSON.stringify(value));
+    }
+    // equally, you don't need the braces and it could all be on one line
+
+6) Explain this code snippet: const {username} = user;
+    Destructuring. We can assume that user is a nobject that has a username property.
+    I think it means const username = user.username; - we'll see... Correct!
+
+
+7) What, primarily, does the Typescript compiler check for?
+    Type errors - that is variables being assigned values that don't conform to the datatype
+    they were first given
+
+8) What is the name of the Angular CLI executable?
+    dist/main.js? Not sure...
+    It's actually ng. Then, there are many ng commands.
+
+9) What is a Nangular component?
+    A re-usable, renderable block of HTML / A custom HTML element
+
+10) What is the role of the HTML and the TS file in an Angular component?
+    The HTML file describes what will be rendered to the DOM; the TS file
+    contains its non-static data and the methods governing its behaviour.
+    Or, HTML is structure; TS is logic and data.

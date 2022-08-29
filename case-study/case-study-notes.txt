@@ -1,0 +1,15 @@
+To run this, may need to npm install json-server.
+json-server db.json --watch; then you visit local host 3000/tracks
+
+Now: to build an app.
+Deploying it requires this to happen first. It uses webpack to create a distribution 
+directory. 
+In the dist/ folder, you can see a few files. The main.js is smaller
+than yours; the user downloads the one index.html file, and the couple of js
+files. In fact you could take the dist folder, and put it on a web server,
+it'll run the entire website from there. You can cd into the dist folder, 
+run http-server (which is installed globally here) and it'll serve up whatever
+it finds; in this case, your angular app. Cool feature of http-server, there.
+
+Netlify is a way of deploying apps for free. This is how you do it; drop your 
+dist folder there. 
